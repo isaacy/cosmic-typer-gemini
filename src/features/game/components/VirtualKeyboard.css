@@ -1,0 +1,61 @@
+:root {
+    --color-finger-l-pinky: #ff4d4d;
+    --color-finger-l-ring: #ffa64d;
+    --color-finger-l-middle: #ffff4d;
+    --color-finger-l-index: #4dff4d;
+    --color-finger-r-index: #4dffff;
+    --color-finger-r-middle: #4d4dff;
+    --color-finger-r-ring: #a64dff;
+    --color-finger-r-pinky: #ff4dff;
+    --color-finger-thumb: #cccccc;
+
+    /* RGB versions for transparency */
+    --color-finger-l-pinky-rgb: 255, 77, 77;
+    --color-finger-l-ring-rgb: 255, 166, 77;
+    --color-finger-l-middle-rgb: 255, 255, 77;
+    --color-finger-l-index-rgb: 77, 255, 77;
+    --color-finger-r-index-rgb: 77, 255, 255;
+    --color-finger-r-middle-rgb: 77, 77, 255;
+    --color-finger-r-ring-rgb: 166, 77, 255;
+    --color-finger-r-pinky-rgb: 255, 77, 255;
+    --color-finger-thumb-rgb: 204, 204, 204;
+}
+
+.virtual-keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px;
+    background: rgba(11, 13, 23, 0.9);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.key {
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    transition: all 0.1s;
+    user-select: none;
+}
+
+.key.active {
+    transform: translateY(2px);
+    font-weight: bold;
+}

@@ -1,0 +1,65 @@
+.mission-view {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.typing-area {
+    background: rgba(21, 25, 43, 0.9);
+    padding: var(--spacing-xl);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.text-display {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: var(--spacing-lg);
+    white-space: pre-wrap;
+}
+
+.char {
+    transition: color 0.1s;
+}
+
+.char.correct {
+    color: var(--color-text-main);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.char.incorrect {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+.char.active {
+    background-color: var(--color-primary);
+    color: var(--color-bg-deep);
+    animation: blink 1s infinite;
+}
+
+.instructions {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}

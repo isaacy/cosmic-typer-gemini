@@ -1,0 +1,54 @@
+:root {
+  /* Cosmic Palette */
+  --color-bg-deep: #0b0d17; /* Deep space black */
+  --color-bg-surface: #15192b; /* Spaceship interior */
+  --color-primary: #00d4ff; /* Cyan glowing interface */
+  --color-secondary: #ff0055; /* Danger / Error / Laser */
+  --color-accent: #ffd700; /* Stars / Gold / Success */
+  --color-text-main: #ffffff;
+  --color-text-muted: #8b9bb4;
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-mono: 'Fira Code', monospace; /* For code/typing */
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Animation */
+  --transition-fast: 0.2s ease;
+  --transition-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-main);
+  overflow: hidden; /* Prevent scroll on game screen */
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  width: 100%;
+}
+
+.text-center { text-align: center; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.hidden { display: none; }

@@ -1,0 +1,116 @@
+.hand-overlay {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.hand {
+    position: relative;
+    width: 140px;
+    height: 160px;
+}
+
+.palm {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    border-radius: 20px 20px 40px 40px;
+    z-index: 1;
+}
+
+.finger {
+    position: absolute;
+    background-color: #444;
+    border-radius: 10px;
+    border: 2px solid #666;
+    width: 18px;
+    transform-origin: bottom center;
+    transition: all 0.2s;
+}
+
+/* Finger positioning */
+.left-hand .pinky {
+    height: 50px;
+    bottom: 90px;
+    left: 10px;
+    transform: rotate(-15deg);
+}
+
+.left-hand .ring {
+    height: 65px;
+    bottom: 95px;
+    left: 35px;
+    transform: rotate(-5deg);
+}
+
+.left-hand .middle {
+    height: 75px;
+    bottom: 98px;
+    left: 60px;
+    transform: rotate(0deg);
+}
+
+.left-hand .index {
+    height: 65px;
+    bottom: 95px;
+    left: 85px;
+    transform: rotate(5deg);
+}
+
+.left-hand .thumb {
+    height: 50px;
+    bottom: 40px;
+    left: 110px;
+    transform: rotate(45deg);
+    width: 22px;
+}
+
+.right-hand .thumb {
+    height: 50px;
+    bottom: 40px;
+    left: 10px;
+    transform: rotate(-45deg);
+    width: 22px;
+}
+
+.right-hand .index {
+    height: 65px;
+    bottom: 95px;
+    left: 35px;
+    transform: rotate(-5deg);
+}
+
+.right-hand .middle {
+    height: 75px;
+    bottom: 98px;
+    left: 60px;
+    transform: rotate(0deg);
+}
+
+.right-hand .ring {
+    height: 65px;
+    bottom: 95px;
+    left: 85px;
+    transform: rotate(5deg);
+}
+
+.right-hand .pinky {
+    height: 50px;
+    bottom: 90px;
+    left: 110px;
+    transform: rotate(15deg);
+}
+
+/* Active State */
+.finger.active {
+    background-color: var(--finger-color);
+    box-shadow: 0 0 15px var(--finger-color);
+    border-color: #fff;
+    transform: scale(1.1) translateY(-5px);
+    z-index: 2;
+}

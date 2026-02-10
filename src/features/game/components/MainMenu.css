@@ -1,0 +1,124 @@
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    animation: fadeIn 0.5s ease-out;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #36e7ff, #7af8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: 4px;
+    text-shadow: 0 0 30px rgba(54, 231, 255, 0.4);
+}
+
+.subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.name-container {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.name-input {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    width: 250px;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.2s;
+}
+
+.name-input:focus {
+    border-color: #36e7ff;
+    outline: none;
+    box-shadow: 0 0 15px rgba(54, 231, 255, 0.3);
+}
+
+.name-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-options {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    min-width: 200px;
+    text-align: left;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary .icon {
+    font-size: 2rem;
+}
+
+.btn-secondary .icon {
+    font-size: 2rem;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-text strong {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+}
+
+.btn-text small {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
